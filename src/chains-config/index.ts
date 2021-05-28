@@ -46,6 +46,7 @@ import { mantaControllers } from './mantaControllers';
 import { parallelControllers } from './parallelControllers';
 import { polkadotControllers } from './polkadotControllers';
 import { polymeshControllers } from './polymeshControllers';
+import { polymeshControllersMainnet } from './polymeshControllersMainnet';
 import { shidenControllers } from './shidenControllers';
 import { soraControllers } from './soraControllers';
 import { westendControllers } from './westendControllers';
@@ -53,7 +54,8 @@ import { westendControllers } from './westendControllers';
 export const specToControllerMap: { [x: string]: ControllerConfig } = {
 	westend: westendControllers,
 	polkadot: polkadotControllers,
-	polymesh: polymeshControllers,
+	polymesh_testnet: polymeshControllers,
+	polymesh_mainnet: polymeshControllersMainnet,
 	kusama: kusamaControllers,
 	kulupu: kulupuControllers,
 	kilt: kiltControllers,

@@ -72,7 +72,7 @@ export class Specs {
 				CONFIG.PORT,
 				'Network interface we bind to. You *MUST* use 0.0.0.0 if you are using Docker.',
 				{
-					default: 8080,
+					default: process.env.PORT || 8080,
 					type: 'number',
 					regexp: /^\d{2,6}$/,
 				},

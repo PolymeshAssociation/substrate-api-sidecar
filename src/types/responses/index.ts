@@ -16,7 +16,9 @@
 
 export * from './AccountAssets';
 export * from './AccountBalanceInfo';
+export * from './AccountCddInfo';
 export * from './AccountConvert';
+export * from './AccountPendingAuthorizations';
 export * from './AccountPoolAssets';
 export * from './AccountProxyInfo';
 export * from './AccountStakingInfo';
