@@ -22,6 +22,7 @@ import '@polkadot/api-augment';
 import { ApiPromise } from '@polkadot/api';
 import { HttpProvider, WsProvider } from '@polkadot/rpc-provider';
 import { OverrideBundleType, RegistryTypes } from '@polkadot/types/types';
+import { typesBundle as PolymeshTypesBundle } from '@polymeshassociation/polymesh-types';
 import { json } from 'express';
 
 import packageJSON from '../package.json';
@@ -31,7 +32,6 @@ import { consoleOverride } from './logging/consoleOverride';
 import { Log } from './logging/Log';
 import { MetricsApp } from './metrics/index';
 import * as middleware from './middleware';
-import tempTypesBundle from './override-types/typesBundle';
 import { parseArgs } from './parseArgs';
 import { SidecarConfig } from './SidecarConfig';
 
@@ -50,7 +50,9 @@ async function main() {
 			? new HttpProvider(config.SUBSTRATE.URL, undefined, CACHE_CAPACITY || 0)
 			: new WsProvider(config.SUBSTRATE.URL, undefined, undefined, undefined, CACHE_CAPACITY || 0),
 		/* eslint-disable @typescript-eslint/no-var-requires */
-		typesBundle: TYPES_BUNDLE ? (require(TYPES_BUNDLE) as OverrideBundleType) : (tempTypesBundle as OverrideBundleType),
+		typesBundle: TYPES_BUNDLE
+			? (require(TYPES_BUNDLE) as OverrideBundleType)
+			: (PolymeshTypesBundle as OverrideBundleType),
 		typesChain: TYPES_CHAIN ? (require(TYPES_CHAIN) as Record<string, RegistryTypes>) : undefined,
 		typesSpec: TYPES_SPEC ? (require(TYPES_SPEC) as Record<string, RegistryTypes>) : undefined,
 		types: TYPES ? (require(TYPES) as RegistryTypes) : undefined,

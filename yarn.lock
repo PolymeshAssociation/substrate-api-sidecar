@@ -1927,6 +1927,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@polymeshassociation/polymesh-types@npm:^5.15.0":
+  version: 5.15.0
+  resolution: "@polymeshassociation/polymesh-types@npm:5.15.0"
+  checksum: 10/a4185b0464f81ab0ea752b363ce1989ace426a7dfcdd1769ef12507acf52d2f0d5bf8eb22f6468b4d960d80377e6e5cf3b12a84410e0e2777e516212f962823e
+  languageName: node
+  linkType: hard
+
 "@protobufjs/aspromise@npm:^1.1.1, @protobufjs/aspromise@npm:^1.1.2":
   version: 1.1.2
   resolution: "@protobufjs/aspromise@npm:1.1.2"
@@ -2051,6 +2058,7 @@ __metadata:
     "@polkadot/util": "npm:^13.4.3"
     "@polkadot/util-crypto": "npm:^13.4.3"
     "@polymeshassociation/polymesh-sdk": "npm:27.6.0"
+    "@polymeshassociation/polymesh-types": "npm:^5.15.0"
     "@substrate/calc": "npm:^0.3.1"
     "@substrate/dev": "npm:^0.9.0"
     "@types/argparse": "npm:2.0.17"
